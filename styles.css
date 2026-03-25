@@ -913,12 +913,12 @@ a { text-decoration: none; color: inherit; }
   color: rgba(255,255,255,0.25);
 }
 .footer__dev a {
-  color: var(--gold);
+  color: rgba(255, 255, 255, 0.35);
   font-size: 0.8rem;
   text-decoration: none;
-  transition: opacity 0.2s;
+  transition: color 0.2s;
 }
-.footer__dev a:hover { opacity: 0.75; }
+.footer__dev a:hover { color: rgba(201, 168, 76, 0.6); }
 
 /* ===== ANIMATIONS ===== */
 .fade-up {
