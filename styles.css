@@ -629,30 +629,78 @@ a { text-decoration: none; color: inherit; }
   margin-bottom: 60px;
 }
 .setor-item {
-  padding: 32px 28px;
-  border: 1px solid var(--gray-200);
+  position: relative;
   border-radius: var(--radius-lg);
-  transition: var(--transition);
+  overflow: hidden;
+  min-height: 220px;
+  display: flex;
+  align-items: flex-end;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(201,168,76,0.15);
 }
 .setor-item:hover {
-  border-color: var(--gold);
-  box-shadow: 0 8px 32px rgba(201,168,76,0.1);
-  transform: translateY(-4px);
+  transform: translateY(-5px);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.35);
+  border-color: rgba(201,168,76,0.4);
+}
+.setor-item__bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: grayscale(15%) brightness(0.55);
+  transition: transform 0.5s ease;
+}
+.setor-item:hover .setor-item__bg {
+  transform: scale(1.05);
+}
+.setor-item__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(8, 18, 40, 0.45) 0%,
+    rgba(8, 18, 40, 0.88) 100%
+  );
+  z-index: 1;
+}
+.setor-item__grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(201,168,76,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(201,168,76,0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+  z-index: 2;
+}
+.setor-item__body {
+  position: relative;
+  z-index: 3;
+  padding: 24px 24px 28px;
+  width: 100%;
+  border-top: 2px solid rgba(201,168,76,0.3);
 }
 .setor-item__icon {
-  font-size: 1.8rem;
-  margin-bottom: 16px;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  display: block;
+  filter: drop-shadow(0 0 6px rgba(201,168,76,0.4));
 }
 .setor-item strong {
   display: block;
   font-size: 1rem;
-  color: var(--navy);
-  margin-bottom: 8px;
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 6px;
+  letter-spacing: 0.01em;
 }
 .setor-item p {
-  font-size: 0.875rem;
-  color: var(--text-light);
-  line-height: 1.6;
+  font-size: 0.82rem;
+  color: rgba(200, 215, 235, 0.85);
+  line-height: 1.55;
+  margin: 0;
 }
 .setores__orgaos {
   display: flex;
