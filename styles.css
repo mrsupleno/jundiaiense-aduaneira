@@ -248,7 +248,7 @@ a { text-decoration: none; color: inherit; }
   object-fit: cover;
   object-position: center 60%;
   opacity: 1;
-  filter: grayscale(15%) brightness(0.55);
+  filter: grayscale(10%) brightness(0.7);
 }
 .hero__overlay {
   position: absolute;
@@ -256,9 +256,9 @@ a { text-decoration: none; color: inherit; }
   background:
     linear-gradient(
       135deg,
-      rgba(8, 18, 40, 0.78) 0%,
-      rgba(12, 25, 55, 0.68) 50%,
-      rgba(8, 18, 40, 0.75) 100%
+      rgba(8, 18, 40, 0.62) 0%,
+      rgba(12, 25, 55, 0.52) 50%,
+      rgba(8, 18, 40, 0.60) 100%
     );
   z-index: 1;
 }
@@ -620,28 +620,30 @@ a { text-decoration: none; color: inherit; }
 /* ===== SETORES ===== */
 .setores {
   padding: 120px 0;
-  background: var(--white);
+  background: var(--navy);
 }
+.setores .section-title { color: var(--white); }
+.setores .section-desc { color: rgba(200,215,235,0.7); }
 .setores__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  gap: 20px;
   margin-bottom: 60px;
 }
 .setor-item {
   position: relative;
   border-radius: var(--radius-lg);
   overflow: hidden;
-  min-height: 220px;
+  height: 260px;
   display: flex;
   align-items: flex-end;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border: 1px solid rgba(201,168,76,0.15);
+  border: 1px solid rgba(201,168,76,0.2);
 }
 .setor-item:hover {
   transform: translateY(-5px);
-  box-shadow: 0 16px 40px rgba(0,0,0,0.35);
-  border-color: rgba(201,168,76,0.4);
+  box-shadow: 0 20px 48px rgba(0,0,0,0.5);
+  border-color: rgba(201,168,76,0.5);
 }
 .setor-item__bg {
   position: absolute;
@@ -650,11 +652,12 @@ a { text-decoration: none; color: inherit; }
   height: 100%;
   object-fit: cover;
   object-position: center;
-  filter: grayscale(15%) brightness(0.55);
-  transition: transform 0.5s ease;
+  filter: grayscale(15%) brightness(0.5);
+  transition: transform 0.5s ease, filter 0.5s ease;
 }
 .setor-item:hover .setor-item__bg {
-  transform: scale(1.05);
+  transform: scale(1.06);
+  filter: grayscale(5%) brightness(0.6);
 }
 .setor-item__overlay {
   position: absolute;
@@ -708,7 +711,8 @@ a { text-decoration: none; color: inherit; }
   gap: 20px;
   flex-wrap: wrap;
   padding: 24px 32px;
-  background: var(--navy);
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(201,168,76,0.2);
   border-radius: var(--radius-lg);
 }
 .setores__orgaos-label {
