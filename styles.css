@@ -84,6 +84,7 @@ a { text-decoration: none; color: inherit; }
 .btn {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
   padding: 14px 28px;
   font-family: var(--font-body);
@@ -94,7 +95,9 @@ a { text-decoration: none; color: inherit; }
   transition: var(--transition);
   cursor: pointer;
   border: none;
-  white-space: nowrap;
+  white-space: normal;
+  text-align: center;
+  line-height: 1.4;
 }
 .btn--primary {
   background: var(--gold);
@@ -993,7 +996,7 @@ a { text-decoration: none; color: inherit; }
 
 @media (max-width: 480px) {
   .hero__actions { flex-direction: column; }
-  .btn { width: 100%; justify-content: center; }
+  .btn { width: 100%; justify-content: center; padding: 16px 20px; box-sizing: border-box; }
   .hero__specialties span { font-size: 0.72rem; }
   .servico-card { padding: 32px 24px; }
 }
