@@ -13,9 +13,15 @@ permissions:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
       
+      - name: Ensure CNAME exists
+        run: echo "jundiaienseaduaneira.mais.top" > CNAME
+
       - name: Setup Pages
         uses: actions/configure-pages@v4
         
