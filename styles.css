@@ -683,7 +683,6 @@ a { text-decoration: none; color: inherit; }
   z-index: 3;
   padding: 24px 24px 28px;
   width: 100%;
-  border-top: 2px solid rgba(201,168,76,0.3);
 }
 .setor-item__icon {
   font-size: 1.5rem;
