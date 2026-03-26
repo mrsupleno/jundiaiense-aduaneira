@@ -20,7 +20,7 @@ jobs:
       - uses: actions/checkout@v4
       
       - name: Ensure CNAME exists
-        run: echo "jundiaienseaduaneira.mais.top" > CNAME
+        run: echo "jundiaienseaduaneira.com.br" > CNAME
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
